@@ -26,6 +26,10 @@ terraform {
     vault = {
       version = "3.19.0"
     }
+      doormat = {
+      source  = "doormat.hashicorp.services/hashicorp-security/doormat"
+      version = ">= 0.0.3"
+    }
   }
   cloud {
     organization = "argocorp"

@@ -12,10 +12,6 @@ terraform {
     workspaces {
       name = "boundary-demo-init"
     }
-      doormat = {
-      source  = "doormat.hashicorp.services/hashicorp-security/doormat"
-      version = ">= 0.0.3"
-    }
   }
 }
 

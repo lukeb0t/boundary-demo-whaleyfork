@@ -51,7 +51,7 @@ data "aws_key_pair" "aws_key_name" {
 }
 
 data "tfe_outputs" "boundary_demo_init" {
-  organization = "swhashi"
+  organization = "argocorp"
   workspace    = "boundary-demo-init"
 }
 

@@ -6,7 +6,7 @@ locals {
 # Create the Okta OAuth App for Boundary
 resource "okta_app_oauth" "okta_app" {
   lifecycle {
-    ignore_changes = [groups, response_types]
+    ignore_changes = [ response_types ] #, groups 
   }
 
   label                     = "HCP Boundary Demo"

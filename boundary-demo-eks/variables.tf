@@ -1,7 +1,6 @@
 variable "region" {
   type        = string
   description = "The region to create instrastructure in"
-  default     = "us-west-2"
 }
 
 variable "boundary_password" {
@@ -26,6 +25,7 @@ variable "okta_org_name" {
 
 variable "db_user" {
   description = "The username to set on the Postgres database Boundary target"
+  default = "postgres"
   type        = string
 }
 

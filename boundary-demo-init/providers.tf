@@ -7,7 +7,8 @@ terraform {
     }
   }
   cloud {
-    organization = "swhashi"
+    organization = "argocorp"
+    hostname     = "app.terraform.io"
     workspaces {
       name = "boundary-demo-init"
     }

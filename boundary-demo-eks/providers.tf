@@ -28,15 +28,27 @@ terraform {
     }
   }
   cloud {
-    organization = "swhashi"
+    organization = "argocorp"
+    hostname     = "app.terraform.io"
     workspaces {
       name = "boundary-demo-eks"
     }
   }
 }
 
+provider "doormat" {}
+
+data "doormat_aws_credentials" "creds" {
+  provider = doormat
+  role_arn = "arn:aws:iam::325038557378:role/boundary-demo-eks"
+}
+
+
 provider "aws" {
   region = var.region
+  access_key = data.doormat_aws_credentials.creds.access_key
+  secret_key = data.doormat_aws_credentials.creds.secret_key
+  token      = data.doormat_aws_credentials.creds.token
 }
 
 provider "tfe" {}

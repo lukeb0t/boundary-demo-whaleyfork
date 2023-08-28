@@ -1,12 +1,12 @@
 terraform {
   required_providers {
     aws = {
-      version = "4.67.0"
+      version = "5.14.0"
       source  = "hashicorp/aws"
     }
     hcp = {
       source  = "hashicorp/hcp"
-      version = "0.52.0"
+      version = "0.69.0"
     }
     kubernetes = {
       version = "2.20.0"
@@ -14,17 +14,17 @@ terraform {
     }
     boundary = {
       source  = "hashicorp/boundary"
-      version = "1.1.7"
+      version = "1.1.9"
     }
     okta = {
       source  = "okta/okta"
-      version = "3.46.0"
+      version = "4.3.0"
     }
     tfe = {
-      version = "0.42.0"
+      version = "0.48.0"
     }
     vault = {
-      version = "3.14.0"
+      version = "3.19.0"
     }
   }
   cloud {

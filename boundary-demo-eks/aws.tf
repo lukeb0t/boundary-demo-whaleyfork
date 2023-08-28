@@ -29,7 +29,7 @@ data "cloudinit_config" "ssh_cert_target" {
 # Create VPC for AWS resources
 module "boundary-eks-vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "3.14.2"
+  version = "5.1.1"
 
   name = "boundary-demo-eks-vpc"
 

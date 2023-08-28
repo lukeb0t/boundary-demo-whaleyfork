@@ -1,7 +1,7 @@
 #Create EC2 bastion security group
 module "bastion-sec-group" {
   source  = "terraform-aws-modules/security-group/aws"
-  version = "4.17.1"
+  version = "5.1.0"
 
   name        = "bastion-sec-group"
   description = "Allow SSH access and from bastion"
@@ -16,7 +16,7 @@ module "bastion-sec-group" {
 
 module "bastion" {
   source  = "terraform-aws-modules/ec2-instance/aws"
-  version = "4.3.0"
+  version = "5.3.1"
 
   name = "boundary-demo-bastion"
 
